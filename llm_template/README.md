@@ -81,17 +81,6 @@ result = RobustJSONParser.extract_json_from_response(raw)
 print(result)  # {"reasoning": "...", "risk_weights": {...}}
 ```
 
-## 文件结构
-
-```
-llm_template/
-├── __init__.py                  # 导出 BaseAgent, create_llm, RobustJSONParser
-├── llm_factory.py               # LLM 工厂 + BaseAgent 基类
-├── json_parser.py               # 鲁棒 JSON 解析器
-├── llm_config.template.json     # 配置模板 (复制后填入 Key)
-└── README.md                    # 本文件
-```
-
 ## 切换 Provider
 
 只需修改 `llm_config.json` 中的 `default_provider`，或在代码中指定 `provider` 参数：
